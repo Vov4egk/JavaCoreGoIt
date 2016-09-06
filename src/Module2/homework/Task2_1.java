@@ -4,14 +4,20 @@ package Module2.homework;
 public class Task2_1 {
     public static void main(String[] args) {
         int[] array = {15, 20, 25, 598, 699, 712, 986, -9, 0, 598};
-        double[] doubleArray = {10.02, 20.15, 25.3, 598.12, 699.17, 712.55, 986.09, -9.5, 0, 598.12};
+        double[] doubleArray = {10.02, 29.15, 25.3, 598.12, 60.17, 71.55, 986.09, -3.5, 0, 598.12};
 
         double doublesum = calculeDoubleSum(doubleArray);
         int intsum = calculateSum(array);
 
-        System.out.println(doublesum);
+        int minArray = intMin(array);
+//        double minDoubleArray = doubleMin(doubleArray);
+
+        System.out.println(minArray);
+//        System.out.println(minDoubleArray);
         System.out.println(intsum);
+        System.out.println(doublesum);
     }
+
 
     private static double calculeDoubleSum(double[] array) {
         double sum = 0;
@@ -25,4 +31,25 @@ public class Task2_1 {
         return sum;
     }
 
+    private static int intMin(int[] array) {
+        int i;
+        for (i = 0; i < array.length; i++)
+            if (array[i] < i) {
+                int min = array[i];
+                return min;
+            }
+        return i;
+    }
+
+//    private static double doubleMin(double[] dooubleArr) {
+//        double j = dooubleArr[0];
+//        for (j = 0; j < dooubleArr.length; j++) {
+//            if (dooubleArr[j] < j) {
+//                double j = dooubleArr[j];
+//                return j;
+//            }
+//        }
+//
+//        return j;
+//    }
 }
