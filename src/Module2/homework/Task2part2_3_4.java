@@ -27,7 +27,7 @@ class Task2part2_3_4 {
         return 0;
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         double balance = 100;
         double withdrawal = 10;
         double withdrawBalance = result(balance, withdrawal);
@@ -54,12 +54,11 @@ class Task2part2_3_4 {
         //part4
 
         ownerName = "Oww";
-        sumOfWithdrawal = 100;
+        double sumOffund = 100;
+        double fundBalance = fundBalance(ownerName, sumOffund);
 
-        withdrawBalance = fundBalance(ownerName, sumOfWithdrawal);
-
-        if (withdrawBalance >= 0) {
-            System.out.println(ownerName + " Balance: " + withdrawBalance);
+        if (fundBalance >= 0) {
+            System.out.println(ownerName + " Balance: " + fundBalance);
         } else {
             System.out.println("NO");
         }
